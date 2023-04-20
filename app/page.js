@@ -1,7 +1,7 @@
-import React from "react"
+import { HomePageContainer } from "@/container/home-page-container"
 
 function HomePage() {
-  return <div>HomePage</div>
+  return <HomePageContainer />
 }
 
 export default HomePage
