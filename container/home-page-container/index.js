@@ -1,3 +1,4 @@
+import { Examples } from "./examples"
 import { PromptForm } from "./prompt-form"
 import { PromptSuggestions } from "./prompt-suggestions"
 import styles from "./styles.module.scss"
@@ -15,6 +16,7 @@ function HomePageContainer() {
       </p>
       <PromptForm />
       <PromptSuggestions />
+      <Examples />
     </div>
   )
 }
