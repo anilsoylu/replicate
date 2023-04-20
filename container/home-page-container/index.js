@@ -1,3 +1,4 @@
+import { PromptForm } from "./prompt-form"
 import styles from "./styles.module.scss"
 
 function HomePageContainer() {
@@ -11,6 +12,7 @@ function HomePageContainer() {
       <p className={styles.description}>
         Tell us a prompt and we&apos;ll generate a story for you.
       </p>
+      <PromptForm />
     </div>
   )
 }
