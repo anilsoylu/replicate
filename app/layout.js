@@ -4,6 +4,12 @@ import "@/styles/variables.css"
 import "@/styles/global.css"
 import { Footer } from "@/components/footer"
 
+export const metadata = {
+  title: "Imaginer",
+  description:
+    "Imaginer is a simple image generator that use your prompt to generate AI based images.",
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="tr" className={mainFont.className}>

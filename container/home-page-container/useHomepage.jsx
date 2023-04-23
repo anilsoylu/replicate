@@ -6,8 +6,24 @@ const HomepageContext = createContext()
 export const HomepageContextProvider = ({ children }) => {
   const [prompt, setPrompt] = useState("")
 
-  const generateImage = () => {
-    // api call
+  const generateImage = async () => {
+    try {
+      const response = await fetch("/api/generate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ prompt }),
+      })
+
+      if (!response.ok) throw new Error(response.statusText ?? response.status)
+
+      const generatedImage = await response.json()
+    } catch (error) {
+      throw new Error("Failed to generate the image")
+    }
+
+    setSubmitting(false)
   }
 
   const changePropmt = (newPrompt) => {
