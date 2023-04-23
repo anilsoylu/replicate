@@ -27,7 +27,6 @@ export const HomepageContextProvider = ({ children }) => {
       setError(null)
     } catch (error) {
       setError(error)
-      throw new Error("Failed to generate the image")
     }
 
     setSubmitting(false)
