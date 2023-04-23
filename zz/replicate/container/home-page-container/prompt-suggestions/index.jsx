@@ -1,12 +1,8 @@
-"use client"
 import { Tag } from "@/components/tag"
 import { SUGGESTIONS } from "./constants"
 import styles from "./styles.module.scss"
-import { useHomepage } from "../useHomepage"
 
 function PromptSuggestions({ suggestions = SUGGESTIONS }) {
-  const { changePropmt } = useHomepage()
-
   return (
     <div className={styles.promptSuggestions}>
       <h3 className={styles.title}>
@@ -15,7 +11,7 @@ function PromptSuggestions({ suggestions = SUGGESTIONS }) {
 
       <div className={styles.suggestions}>
         {suggestions.map(({ title, id }) => (
-          <Tag onClick={changePropmt} key={id} title={title} />
+          <Tag key={id} title={title} />
         ))}
       </div>
     </div>
